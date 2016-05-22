@@ -80,6 +80,8 @@ public class HangmanSolverBot extends PircBot {
                         shouldAutoSolve = !shouldAutoSolve;
                         sendMessage( channel, "Autosolving " + ( shouldAutoSolve ? "enabled" : "disabled" ) );
                         break;
+                    default:
+                        break;
                 }
             }
 
@@ -88,6 +90,8 @@ public class HangmanSolverBot extends PircBot {
                     HangmanSolver.Solution solution = solver.solve( known, incorrect );
                     char c = solution.counts.keySet().iterator().next();
                     sendMessage( channel, "char " + c + " is worth a try" );
+                    break;
+                default:
                     break;
             }
         }
