@@ -3,7 +3,6 @@ package me.minidigger.hangmansolver;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -109,11 +108,7 @@ class HangmanSolver {
 
     private <K, V extends Comparable<? super V>> Map<K, V> sortByValue( Map<K, V> map ) {
         List<Map.Entry<K, V>> list = new LinkedList<>( map.entrySet() );
-        Collections.sort( list, new Comparator<Map.Entry<K, V>>() {
-            public int compare( Map.Entry<K, V> o1, Map.Entry<K, V> o2 ) {
-                return ( o2.getValue() ).compareTo( o1.getValue() );
-            }
-        } );
+        Collections.sort( list, ( o1, o2 ) -> ( o2.getValue() ).compareTo( o1.getValue() ) );
 
         Map<K, V> result = new LinkedHashMap<>();
         for ( Map.Entry<K, V> entry : list ) {
