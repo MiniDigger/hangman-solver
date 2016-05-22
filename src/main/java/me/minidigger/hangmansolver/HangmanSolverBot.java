@@ -96,16 +96,23 @@ public class HangmanSolverBot extends PircBot {
     public static void main( String[] args ) throws IOException, IrcException {
         String server = "irc.spi.gt";
         String channel = "#hangman";
+        String owner = "MiniDigger";
+        String botName = "HangManSolver";
+        String hangManBot = "Angstman";
 
-        if ( args.length == 2 ) {
+        if ( args.length == 4 ) {
             server = args[0];
             channel = args[1];
+            owner = args[2];
+            botName = args[3];
         }
 
-        HangmanSolverBot bot = new HangmanSolverBot( "Angstman", "HangManSolver", "MiniDigger" );
+        HangmanSolverBot bot = new HangmanSolverBot( hangManBot, botName, owner );
         bot.setVerbose( false );
+        bot.setLogin( "HangmanSolver" );
+        bot.setVersion( "HangmanSolver by MiniDigger - https://github.com/MiniDigger/hangman-solver" );
         bot.connect( server );
-        bot.setLogin( "HangmanSolver by MiniDigger - " );
+        System.out.println( bot.getNick() + " " + bot.getName() );
         bot.joinChannel( channel );
     }
 }
