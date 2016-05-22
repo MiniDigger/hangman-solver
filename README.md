@@ -1,4 +1,4 @@
-# hangman-solver
+# hangman-solver [![Build Status](https://travis-ci.org/MiniDigger/hangman-solver.svg?branch=master)](https://travis-ci.org/MiniDigger/hangman-solver) [![Dependency Status](https://www.versioneye.com/user/projects/5741bcc1ce8d0e0047372296/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5741bcc1ce8d0e0047372296) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/66934c894d3741c5afd0252f93d053bd)](https://www.codacy.com/app/mini-digger/hangman-solver?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MiniDigger/hangman-solver&amp;utm_campaign=Badge_Grade)
 
 Small irc bot to solve hangman puzzels
 
